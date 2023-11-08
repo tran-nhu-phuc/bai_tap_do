@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let K = +prompt("nhập độ Kevin");
+      let C = +prompt("Nhập đọ C");
+      let nhietDo = {
+        doC: C,
+        kevin: K,
+        tinhDoC: (a) => {
+          return a / 273.15;
+        },
+        tinhKevin: (b) => {
+          return b * 273.15;
+        },
+      };
+      console.log(
+        "độ tính độ C từ Kevin bạn vừa nhập : " +
+          nhietDo.kevin +
+          " Kevin = " +
+          nhietDo.tinhDoC(nhietDo.kevin) +
+          "C"
+      );
+      console.log(
+        "độ tính độ Kevin từ C bạn vừa nhập : " +
+          nhietDo.doC +
+          " C = " +
+          nhietDo.tinhKevin(nhietDo.doC) +
+          "K"
+      );
+    </script>
+  </body>
+</html>

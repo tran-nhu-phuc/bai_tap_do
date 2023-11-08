@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="image">
+      <div class="image-1">
+        <img
+          src="https://th.bing.com/th/id/OIP.N5gJYKI6u-srD4VKDaROzgHaKW?pid=ImgDet&rs=1"
+          alt=""
+        />
+      </div>
+      <div class="image-2"></div>
+      <button onclick="changeImage()">click</button>
+    </div>
+  </body>
+</html>
+<style>
+  .image {
+    display: flex;
+    width: 80%;
+    height: 500px;
+    flex-direction: column;
+  }
+  image {
+    width: 100%;
+    height: 400px;
+  }
+  .image-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .image-2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .image-2-div-1 img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+</style>
+<script>
+  let image = document.querySelector(".image-2");
+  let image_1 = document.querySelector(".image-1 img");
+  let array = [
+    "https://upanh123.com/wp-content/uploads/2020/10/anh-anime-girl1.jpg",
+    "https://th.bing.com/th/id/OIP.abqHJ9vZLY6MATFdkpG_hgAAAA?pid=ImgDet&rs=1",
+    "https://freenice.net/wp-content/uploads/2021/08/Hinh-anh-nen-anime-dep-de-thuong-nhat.jpg",
+    "https://freenice.net/wp-content/uploads/2021/08/Hinh-anh-nen-anime-dep-de-thuong-nhat.jpg",
+    "https://phunugioi.com/wp-content/uploads/2020/03/hinh-nen-anime-dep-de-thuong-cute-buon-ngau-lanh-lung.jpg",
+    "https://th.bing.com/th/id/OIP.BiCKfwDo53OAWNYYcHF_RwAAAA?pid=ImgDet&rs=1",
+  ];
+  array.forEach((item, index) => {
+    console.log(image);
+    image.innerHTML += `<img src="${item}"/>`;
+  });
+
+  function changeImage() {
+    for (let i = 0; i < array.length; i++) {}
+  }
+</script>

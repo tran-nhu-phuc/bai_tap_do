@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let weight = +prompt("nhập cân nặng của bạn");
+  let high = +prompt("nhập chiều cao của bạn(theo mét)");
+  let ibm = weight / high ** 2;
+  if (isNaN(weight) || isNaN(high)) {
+    console.log("bạn đã nhập sai");
+  } else {
+    if (ibm >= 40) {
+      console.log("béo phì loại III");
+    } else if (ibm >= 30) {
+      console.log("béo phì loại II");
+    } else if (ibm > 25 && ibm <= 29.9) {
+      console.log("béo phì loại I");
+    } else if (ibm > 23 && ibm <= 24.9) {
+      console.log("Tiền béo phì");
+    } else if (ibm >= 23) {
+      console.log("thừa cân");
+    } else if (ibm > 18.5 && ibm < 22.9) {
+      console.log("bình thường");
+    } else {
+      console.log("gầy");
+    }
+  }
+</script>

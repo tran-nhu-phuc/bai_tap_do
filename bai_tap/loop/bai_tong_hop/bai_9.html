@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let van = +prompt("nhập điểm môn văn");
+    let su = +prompt("nhập điểm môn văn");
+    let dia = +prompt("nhập điểm môn văn");
+    let toan = +prompt("nhập điểm môn văn");
+    let ly = +prompt("nhập điểm môn văn");
+    let hoa = +prompt("nhập điểm môn văn");
+    let sum = (van + su + dia + toan + ly + hoa) / 6;
+    if (sum >= 9.5) {
+      console.log("học sinh suất sắc");
+    } else if (sum >= 8.0) {
+      console.log("học sinh giỏi");
+    } else if (sum >= 5.0) {
+      console.log("học sinh khá");
+    } else if (sum >= 3.5) {
+      console.log("học sinh trung bình");
+    } else if (sum > 2.0) {
+      console.log("học sinh yếu");
+    } else {
+      let hanhKiem = prompt("nhập hạnh kiểm");
+      if (hanhKiem === "good") {
+        console.log("lên lớp");
+      } else {
+        console.log("rớt lớp");
+      }
+    }
+  </script>
+</html>

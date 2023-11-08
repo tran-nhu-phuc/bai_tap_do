@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // bài 1
+  //   let lor = ["Lion", "Tiger", "Wolf", "Kangaroo"];
+  //   for (let value of lor) {
+  //     console.log(value);
+  //   }
+  //   bài 2
+  let array = +prompt("nhập number");
+  let arr = [];
+  arr.push(array[0]);
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      arr.push("-" + array[i]);
+    } else {
+      arr.push(array[i]);
+    }
+  }
+  console.log(arr.join(""));
+  //   bai-3
+  //   let text = [
+  //     "K",
+  //     "e",
+  //     "e",
+  //     "p",
+  //     "C",
+  //     "a",
+  //     "l",
+  //     "m",
+  //     "A",
+  //     "n",
+  //     "d",
+  //     "C",
+  //     "o",
+  //     "d",
+  //     "e",
+  //     "O",
+  //     "n",
+  //   ];
+  //   console.log(text.join(""));
+  //   let ar = [];
+  //   for (let i = 0; i < text.length; i++) {
+  //     if (text[i] === text[i].toUpperCase()) {
+  //       ar.push(text[i].toLowerCase());
+  //     } else {
+  //       ar.push(text[i].toUpperCase());
+  //     }
+  //   }
+  //   console.log(ar.join(""));
+</script>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="tinh()">tính</button>
+  </body>
+</html>
+<script>
+  let ly = +prompt("nhập số môn lý");
+  let toan = +prompt("nhập điểm môn toán");
+  let hoa = +prompt("nhập điểm môn hóa");
+  function tinh() {
+    document.write("điểm trung bình 3 môn = " + (ly + toan + hoa) / 3);
+  }
+</script>

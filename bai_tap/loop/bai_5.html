@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let day = +prompt("nhập ngày");
+    let month = +prompt("nhập tháng");
+    // if ((day >= 21 && month >= 3) || (day <= 19 && month <= 4)) {
+    //   console.log("Bạch dương");
+    // } else if ((day >= 20 && month >= 4) || (day <= 20 && month <= 5)) {
+    //   console.log("Kim ngưu");
+    // } else if ((day >= 21 && month >= 5) || (day <= 21 && month <= 6)) {
+    //   console.log("Song tử");
+    // } else if ((day >= 22 && month >= 6) || (day <= 22 && month <= 7)) {
+    //   console.log("Cự giải");
+    // } else if ((day >= 23 && month >= 7) || (day <= 22 && month <= 8)) {
+    //   console.log("Sư tử");
+    // } else if ((day >= 23 && month >= 8) || (day <= 22 && month <= 9)) {
+    //   console.log("Xử nữ");
+    // } else if ((day >= 23 && month >= 9) || (day <= 23 && month <= 10)) {
+    //   console.log("Thiên bình");
+    // } else if ((day >= 24 && month >= 10) || (day <= 21 && month <= 11)) {
+    //   console.log("Hổ cáp");
+    // } else if ((day >= 22 && month >= 11) || (day <= 21 && month <= 12)) {
+    //   console.log("Nhân mã");
+    // } else if ((day >= 22 && month >= 12) || (day <= 19 && month <= 1)) {
+    //   console.log("Ma kết");
+    // } else if ((day >= 20 && month >= 1) || (day <= 18 && month <= 2)) {
+    //   console.log("Bảo bình");
+    // } else if ((day >= 19 && month >= 2) || (day <= 20 && month <= 3)) {
+    //   console.log("Song ngư");
+    // }
+    switch (month) {
+      case 1:
+        if (day >= 20) {
+          console.log("Bảo bình");
+        } else if (day <= 19) {
+          console.log("ma kết");
+        }
+        break;
+      case 2:
+        if (day >= 19) {
+          console.log("song ngữ");
+        } else if (day <= 18) {
+          console.log("Bảo bình");
+        }
+        break;
+      case 3:
+        if (day >= 21) {
+          console.log("bạch dương");
+        } else if (day <= 20) {
+          console.log("song ngư");
+        }
+        break;
+      case 4:
+        if (day >= 20) {
+          console.log("bạch dương");
+        } else if (day <= 19) {
+          console.log("kim ngư");
+        }
+        break;
+      case 5:
+        if (day >= 21) {
+          console.log("kim ngưu");
+        } else if (day <= 20) {
+          console.log("song tử");
+        }
+        break;
+      case 6:
+        if (day >= 22) {
+          console.log("cự giải ");
+        } else if (day <= 21) {
+          console.log("song tử");
+        }
+      case 7:
+        if (day >= 23) {
+          console.log("sư tử");
+        } else if (day <= 22) {
+          console.log("cự giải");
+        }
+        break;
+      case 8:
+        if (day >= 23) {
+          console.log("xử nữ");
+        } else if (day <= 22) {
+          console.log("sư tử");
+        }
+        break;
+      case 9:
+        if (day >= 23) {
+          console.log("thiên bình");
+        } else if (day <= 22) {
+          console.log("xử nữ");
+        }
+        break;
+      case 10:
+        if (day >= 24) {
+          console.log("hổ cáp");
+        } else if (day <= 23) {
+          console.log("thiên bình");
+        }
+        break;
+      case 11:
+        if (day >= 22) {
+          console.log("nhân mã");
+        } else if (day <= 21) {
+          console.log("hổ cáp");
+        }
+        break;
+      case 12:
+        if (day >= 22) {
+          console.log("ma kết");
+        } else if (day <= 21) {
+          console.log("nhân mã");
+        }
+        break;
+      default:
+        console.log("lỗi");
+    }
+  </script>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="changeMoney()">Đổi tiền</button>
+  </body>
+</html>
+<script>
+  let money = +prompt("Nhập số tiền mà bạn muốn đổi sang usd");
+  function changeMoney() {
+    document.write("vnd = " + money / 24000 + "usd");
+  }
+</script>

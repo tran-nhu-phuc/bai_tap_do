@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let english = ["hello", "good girl", "bad boy"];
+  let vietnam = ["xin chao", "gái đẹp", "thang ngu"];
+  let text = prompt("search");
+  for (let i = 0; i < english.length; i++) {
+    if (english[i] == text.toUpperCase() || english[i] == text.toLowerCase()) {
+      console.log(vietnam[i]);
+      break;
+    }
+  }
+</script>

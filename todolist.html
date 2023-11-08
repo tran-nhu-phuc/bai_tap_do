@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</head>
+<body>
+
+<button onclick="add()" style="background-color: pink" >Thêm Xe</button>
+<button onclick="del()" style="background-color: pink">Xóa Xe</button>
+<br><br>
+<div>
+    <label>Biển Số Xe : <input type="text" id="bienSo"> </label>
+    <label>Họ Tên Học Viên : <input type="text" id="tenHv"> </label>
+    <label>Chứng Minh Nhan Dan : <input type="number" id="cmnd"> </label>
+    <label>Hãng Xe : <input type="text" id="hangXe"> </label>
+    <label>Phí Gửi Xe : <input type="number" id="phiGuiXe"> </label>
+
+    <br><br>
+</div>
+
+<div id="tableHv">result</div>
+
+
+<script>
+
+    class QuanLyXeMay {
+        constructor(bsx, tenHv, cmnd, hangXe, phiGuiXe) {
+            this._bsx = bsx;
+            this._tenHv = tenHv;
+            this._cmnd = cmnd;
+            this._hangXe = hangXe;
+            this._phiGuiXe = phiGuiXe;
+        }
+
+        set bsx(value) {
+            this._bsx = value;
+        }
+
+        get bsx() {
+            return this._bsx;
+        }
+
+        set tenHv(value) {
+            this._tenHv = value
+        }
+
+        get tenHV() {
+            return this._tenHv
+        }
+
+        set cmnd(value) {
+            this._cmnd = value;
+        }
+
+        get cmnd() {
+            return this._cmnd
+        }
+
+        set hangXe(value) {
+            this._hangXe = value
+        }
+
+        get hangXe() {
+            return this._hangXe
+        }
+
+        set phiGuiXe(value) {
+            this._phiGuiXe = value
+        }
+
+        get phiGuiXe() {
+            return this._phiGuiXe
+        }
+    }
+
+    let hocVienArray = [];
+    let hv1 = new QuanLyXeMay("43C1-12345", "Truong Thi Ngan", "214569874", "SYM", "24000")
+    let hv2 = new QuanLyXeMay("75H1-56789", "Nguyen Van An", "954123452", "HonDa", "24000")
+    let hv3 = new QuanLyXeMay("81K1-68686", "Le Thi Dung", "451236548", "Yamaha", "48000")
+
+    hocVienArray.push(hv1)
+    hocVienArray.push(hv2)
+    hocVienArray.push(hv3)
+
+    //hien thi
+    function showDSHocVien(dsHocVien) {
+        let stringHocVien = "<table border='2'>";
+        stringHocVien += "<tr>" +
+            "<th>Bien So Xe</th>" +
+            "<th>Ho Ten HV</th>" +
+            "<th>Chung Minh Nhan Dan</th>" +
+            "<th>Hang Xe May</th>" +
+            "<th>Phi Da Dong</th>" +
+            "</tr>";
+
+        for (let i = 0; i < dsHocVien.length; i++) {
+            stringHocVien += "<tr>" +
+                "<td>" + dsHocVien[i].bsx + "</td>" +
+                "<td>" + dsHocVien[i].tenHV + "</td>" +
+                "<td>" + dsHocVien[i].cmnd + "</td>" +
+                "<td>" + dsHocVien[i].hangXe + "</td>" +
+                "<td>" + dsHocVien[i].phiGuiXe + "</td>" +
+                "</tr>"
+
+        }
+        stringHocVien += "</table>";
+        document.getElementById("tableHv").innerHTML = stringHocVien
+    }
+
+    showDSHocVien(hocVienArray)
+
+
+    //Them Xe
+    function add() {
+
+        let bsx = document.getElementById("bienSo").value;
+        let ten = document.getElementById("tenHv").value;
+        let cmnd = document.getElementById("cmnd").value;
+        let hang = document.getElementById("hangXe").value;
+        let phi = document.getElementById("phiGuiXe").value;
+
+        let newMotor = new QuanLyXeMay(bsx, ten, cmnd, hang, phi);
+        hocVienArray.push(newMotor)
+        alert("Bạn vừa thêm thành công xe mang biển số: " + newMotor.bsx)
+        showDSHocVien(hocVienArray)
+
+    }
+
+    function del() {
+        let delMotor = prompt("Nhập biển số xe cần xóa:")
+        let flag = false;
+        for (let i = 0; i < hocVienArray.length; i++) {
+            if (hocVienArray[i].bsx === delMotor) {
+                if (confirm("Bạn muốn xóa xe mang biển số: " + delMotor + "?") == true) {
+                    hocVienArray.splice(i, 1)
+                    alert("Đã xóa xe có biển số : " + delMotor)
+                }
+            }
+        }
+        showDSHocVien(hocVienArray)
+    }
+
+</script>
+</body>
+</html>

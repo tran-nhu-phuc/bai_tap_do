@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input" placeholder="enter" />
+    <button onclick="add()">add</button>
+    <p id="result"></p>
+    <table>
+      <tr>
+        <th></th>
+      </tr>
+    </table>
+  </body>
+</html>
+<script>
+  let array = [];
+  function result_a(arr) {
+    let table = `<table border="1" style="border-collapse: collapse">`;
+    table += `<tr><th>phúc</th><th>change</th><tr>`;
+    for (let j = 0; j < arr.length; j++) {
+      table += `<tr><td>${arr[j]}</td><td><button onclick="delet(${j})">x</button><button onclick="edit(${j})">-</button></td></tr>`;
+    }
+    table += `</table>`;
+    document.getElementById("result").innerHTML = table;
+  }
+  result_a(array);
+  function add() {
+    let a = document.getElementById("input").value;
+    array.push(a);
+    return result_a(array);
+  }
+  function delet(index) {
+    array.splice(index, 1);
+    return result_a(array);
+  }
+  function edit(index) {
+    let editInput = `<input type="text" id="edit" placeholder="enter edit"><button onclick="enter(${index})">change</button>`;
+    document.getElementById("result").innerHTML += editInput;
+  }
+  function enter(i) {
+    let newValue = document.getElementById("edit").value;
+    array.splice(i, 1, newValue);
+    return result_a(array);
+  }
+</script>

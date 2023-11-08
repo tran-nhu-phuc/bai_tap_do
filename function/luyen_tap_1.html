@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // bai_1: bình phương
+  // function number(a){
+  //     return a**2
+  // }
+  // console.log(number(2))
+  // bai_2
+  // bai_2:diện tích hình tròn
+  //   function dientich(R) {
+  //     return "diện tích : " + R ** 2 * Math.PI;
+  //   }
+  //   let banKinh = +prompt("nhập bán kính");
+  //   document.write(dientich(banKinh));
+  //   //   bai_3: tính chu vi hình tròn
+  //   function chuvi(R) {
+  //     return "chu vi" + R * 2 * Math.PI;
+  //   }
+  //   document.write(chuvi(banKinh));
+  // bai 4: tính giai thừa
+  //   function tinhGiaiThua(num) {
+  //     let number = 1;
+  //     for (let i = 1; i <= num; i++) {
+  //       number *= i;
+  //     }
+  //     return "giai thừa " + num + " = " + +number;
+  //   }
+  //   let a = +prompt("nhập số yêu thích");
+  //   document.write(tinhGiaiThua(a));
+  // bai_5 checkNumber
+  //   function checkNumber(number) {
+  //     if (!isNaN(number)) {
+  //       return true;
+  //     } else {
+  //       return false;
+  //     }
+  //   }
+  //   document.write(checkNumber(1));
+  // bai_6:kiểm tra số nguyên dương
+  //   function checkNumber(num) {
+  //     if (num > 0) {
+  //       return true;
+  //     } else {
+  //       return false;
+  //     }
+  //   }
+  //   let number_1 = +prompt("kiểm tra số nguyên dương");
+  //   document.write(checkNumber(number_1));
+  // bai_7:change số qua lại
+  //   function changeEvent(a, b) {
+  //     let c = null;
+  //     c = a + b;
+  //     b = c - b;
+  //     a = c - b;
+  //     return a + " " + b;
+  //   }
+  //   document.write(changeEvent(2, 4));
+  // bai_8 tìm mảng số nguyên và đảo ngược
+  //   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  //   function checkArray() {
+  //     let b = arr.reverse();
+  //     return b;
+  //   }
+  //   for (const value of checkArray(arr)) {
+  //     document.write(value);
+  //   }
+  // bai_9
+  let arr = [1, 2, 3, 4, 5, 6, 6, 5];
+  function checkArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      let count = 0;
+      for (let j = 0; j < arr.length; j++) {
+        if (arr[i] == arr[j]) {
+          count++;
+        }
+      }
+      console.log(`giá trị ${arr[i]} xuất hiên ${count}`);
+    }
+  }
+  checkArray(arr);
+</script>

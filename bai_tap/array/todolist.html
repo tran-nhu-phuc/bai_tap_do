@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Todo list</h1>
+    <button onclick="add()">Add todo</button>
+    <button onclick="delete_1()">Delete todo</button>
+    <button onclick="update()">Update todo</button>
+    <ol id="todo"></ol>
+  </body>
+</html>
+<script>
+  const list = document.getElementById("todo");
+  const arr = [];
+  function add() {
+    const input = prompt("nhập công việc");
+    arr.push(input);
+    list.innerHTML = "";
+    // for (let index in arr) {
+    //   list.innerHTML += `<li>${arr[index]}</li>`;
+    // }
+    for (let i = 0; i < arr.length; i++) {
+      list.innerHTML += `<li>${arr[i]}</li>`;
+    }
+  }
+  function delete_1() {
+    const input = +prompt("nhập vào vị trí muốn xoá");
+    arr.splice(input, 1);
+    list.innerHTML = "";
+    for (let index in arr) {
+      list.innerHTML += `<li>${arr[index]}</li>`;
+    }
+  }
+  function update() {
+    const input = +prompt("nhập vào vị trí muốn sửa");
+    const data = prompt("Nhập vào công việc sửa");
+    arr.splice(input, 1, data);
+    list.innerHTML = "";
+    for (let index in arr) {
+      list.innerHTML += `<li>${arr[index]}</li>`;
+    }
+  }
+</script>

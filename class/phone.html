@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Phone {
+        constructor(SaveMessage, SaveToMessage, SaveDoneMessage) {
+          (this.pin = 100),
+            (this.SaveMessage = SaveMessage),
+            (this.SaveToMessage = SaveToMessage),
+            (this.SaveDoneMessage = SaveDoneMessage),
+            (this.turn = true),
+            (this.putIn = false);
+        }
+        Pin() {
+          return this.pin;
+        }
+        NodeMessage() {
+          this.pin--;
+          if (this.turn) {
+            return this.SaveMessage;
+          }
+        }
+        SendMessage() {
+          this.pin--;
+          if (this.turn) {
+            return this.SaveMessage;
+          }
+        }
+        LookToMessage() {
+          this.pin--;
+          if (this.turn) {
+            return this.SaveToMessage;
+          }
+        }
+      }
+      class Nokia {
+        constructor(SaveMessage, SaveToMessage, SaveDoneMessage) {
+          (this.pin = 100),
+            (this.SaveMessage = SaveMessage),
+            (this.SaveToMessage = SaveToMessage),
+            (this.SaveDoneMessage = SaveDoneMessage),
+            (this.turn = true),
+            (this.putIn = false);
+        }
+        Pin() {
+          return this.pin;
+        }
+        NodeMessage() {
+          this.pin--;
+          if (this.turn) {
+            return this.SaveMessage;
+          }
+        }
+        SendMessage() {
+          this.pin--;
+          if (this.turn) {
+            return this.SaveMessage;
+          }
+        }
+        LookToMessage() {
+          this.pin--;
+          if (this.turn) {
+            return this.SaveToMessage;
+          }
+        }
+      }
+      let phone = new Phone("hello nokia", "hello Nokia", "hello nokia");
+      let nokia = new Nokia("hello phone", phone.SendMessage(), "hello phone");
+
+      console.log(phone.LookToMessage());
+      console.log(phone.Pin());
+    </script>
+  </body>
+</html>

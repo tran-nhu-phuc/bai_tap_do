@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const phone = {
+        pin: 100,
+        messenSave: () => {
+          if (this.turnPhone !== true && pin <= 0) {
+            console.log("điện thoại lỗi");
+          } else {
+            let a = prompt("nhập tin nhắn");
+            console.log("tin nhắn đã được lưu ở đây là : " + a);
+            console.log(--phone.pin);
+          }
+        },
+        toMessenSave: () => {
+          if (this.turnPhone !== true && pin <= 0) {
+            console.log("điện thoại lỗi");
+          } else {
+            let a = prompt("nhập tin nhắn");
+            console.log("tin nhắn đã được lưu ở đây là : " + a);
+            console.log(--phone.pin);
+          }
+        },
+        doneSendSave: () => {
+          if (this.turnPhone !== true && pin <= 0) {
+            console.log("điện thoại lỗi");
+          } else {
+            let a = prompt("nhập tin nhắn");
+            console.log("tin nhắn đã được gửi là : " + a);
+            console.log(--phone.pin);
+          }
+        },
+        turnPhone: true,
+        putInPhone: this.pin++,
+        messenNode: () => {
+          if (this.turnPhone !== true && pin <= 0) {
+            console.log("điện thoại lỗi");
+          } else {
+            let a = prompt("nhập tin nhắn");
+            console.log("tin nhắn đã ghi: " + a);
+            console.log(--phone.pin);
+          }
+        },
+        getMessen: () => {
+          if (this.turnPhone !== true && pin <= 0) {
+            console.log("điện thoại lỗi");
+          } else {
+            let a = prompt("nhập tin nhắn");
+            console.log("tin nhắn đã tới đây là : " + a);
+            console.log(--phone.pin);
+          }
+        },
+        sendMessen: () => {
+          if (this.turnPhone !== true && pin <= 0) {
+            console.log("điện thoại lỗi");
+          } else {
+            let a = prompt("nhập tin nhắn");
+            console.log("tin nhắn đã gửi là : " + a);
+            console.log(--phone.pin);
+          }
+        },
+        lookMessen: () => {
+          if (this.turnPhone !== true && pin <= 0) {
+            console.log("điện thoại lỗi");
+          } else {
+            let a = prompt("nhập tin nhắn");
+            console.log("tin nhắn có nội dung là : " + a);
+            console.log(--phone.pin);
+          }
+        },
+      };
+      phone.getMessen();
+      phone.sendMessen();
+      phone.lookMessen();
+      phone.messenNode();
+    </script>
+  </body>
+</html>
